@@ -1,5 +1,8 @@
 import axios from "axios";
 import React from "react";
+import LocationData from "./LocationData";
+import Header from "./Header";
+import './App.css';
 
 class App extends React.Component {
 
@@ -14,23 +17,23 @@ class App extends React.Component {
   handleChange = (event) => {
     this.setState({ searchQuery: event.target.value});
   }
+
   getLocation = async() => {
     const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.searchQuery}&format=json`;
+    
     console.log('URL: ', url)
-    const response = await axios.get(url);
+    const response = await axios.get(url).catch(err => alert(`Can't display a location that doesn't exist: ${err}`));
     console.log(response)
     this.setState({location: response.data[0]})
   }
+  
 
   render() {
     return (
       <>
-        <div className="App">
-          <h1>City Explorer</h1>
-          <input type="text" onChange={this.handleChange} placeholder="Search for a city"/>
-          <button onClick={this.getLocation}>Explore!</button>
-          {this.state.location.display_name && <h2>The city we searched for is {this.state.location.display_name} </h2>}
-        </div>
+          <Header handleChange={this.handleChange} getLocation={this.getLocation}/>
+          <LocationData locationData={this.state.location}/>
+        
       </>
     
     );
