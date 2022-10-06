@@ -26,14 +26,21 @@ npm start
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Name of feature: ________________________________
+**Whiteboard Lab 1, Collaboration with Chris Lopez**
 
-Estimate of time needed to complete: _____
+![Our whiteboard for lab 1](/public/whiteboardlab1.png)
 
-Start time: _____
+## Feature log
 
-Finish time: _____
+Name of feature: Map and coordinates
 
-Actual time needed to complete: _____
+Estimate of time needed to complete: 2 hours
+
+Start time: 7:00pm
+
+Finish time: 8:14pm
+
+Actual time needed to complete: 2:14
+
+------------------------------------------------
