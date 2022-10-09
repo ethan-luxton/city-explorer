@@ -44,3 +44,13 @@ Finish time: 8:14pm
 Actual time needed to complete: 2:14
 
 ------------------------------------------------
+
+Name of feature: Lab 07: Placeholder Weather Data
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 3:00pm
+
+Finish time: 7:24pm
+
+Actual time needed to complete: 4:24
