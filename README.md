@@ -54,3 +54,18 @@ Start time: 3:00pm
 Finish time: 7:24pm
 
 Actual time needed to complete: 4:24
+
+----------------------------------------------------
+**Whiteboard Lab 8, Collaboration with Andra Steele**
+
+![Our whiteboard for lab 8](/public/whiteboardlab8.png)
+
+Name of feature: Movie and Weather APIs
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 7:00pm
+
+Finish time: 9:35pm
+
+Actual time needed to complete: 2:35
