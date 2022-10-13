@@ -1,4 +1,18 @@
-* {
+.movie {
+    display: block;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
+}
+.weather {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    display: grid;
+    grid-template-columns: 12px 12px 12px;
+
+    justify-content: space-between;
 }
