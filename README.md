@@ -1,7 +1,7 @@
-# Project Name
+# City Explorer
 
 **Author**: Ethan Luxton
-**Version**: 1.0.0 
+**Version**: 1.3.0 
 
 ## Overview
 A helpful web app to help you plan your next trip!
@@ -18,12 +18,15 @@ npm start
 ```
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+This application utilizes several different technologies: React, Axios, Express, Node.js, Heroku and Netlify. As well as the WeatherBit.io, TheMovieDB, and LocationIQ APIs; to display data to the user regarding a location they may be visiting in the future.
+
+It provides a 5 day forecast, various movie recommendations, and the lat/lon of the place they are visiting.
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+v1.0.0: Basic map and coordinates from LocationIQ, deployed website to Netlify
+v1.1.0: Placeholder weather data and express server, deployed server to Heroku
+v1.2.0: Adding movie and weather APIs to express server
+v1.3.0: Stylizing the website and putting the finishing touches on the components
 
 ## Credit and Collaborations
 
@@ -69,3 +72,17 @@ Start time: 7:00pm
 Finish time: 9:35pm
 
 Actual time needed to complete: 2:35
+
+**Whiteboard Lab 9, Collaboration with Camilla Rees**
+
+![Our whiteboard for lab 9](/public/whiteboardlab9.png)
+
+Name of feature: Stylizing and refactoring
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 2:30pm
+
+Finish time: 4:51pm
+
+Actual time needed to complete: 2:21

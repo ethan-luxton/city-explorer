@@ -1,33 +1,40 @@
 import React from 'react';
-import { Container} from 'react-bootstrap';
+import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Weather extends React.Component {
   render() {
     return (
       <>
+        <h4>Weather for {this.props.locationData.display_name}</h4>
         {this.props.displayWeather &&
-        <Container>
-       <h4>Weather for {this.props.locationData.display_name}</h4>
-          <div>
+      
+          <Accordion defaultActiveKey="1" flush>
             {this.props.weatherData.map((e, i) => {
               return (
-                <>
-                <div>
-                  <div className={'weather'}><h5 key={i}>Date: {e.date}</h5></div>
-                  <div className={'weather'}><h6>Forecast: {e.description}</h6></div>
-                </div>
+              <Accordion.Item eventKey='0'>
+                <Accordion.Header>
+                  Date: {e.date}
+                </Accordion.Header>
+                <Accordion.Body>
+                  Forecast: {e.description}
+                </Accordion.Body>
+
+              </Accordion.Item>
+              
                   
-                </>
+              
               )
             })}
-          </div>
+          </Accordion>
          
-        </Container>
+       
         }
       </>
     )
   }
 }
+
+      
 
 export default Weather;

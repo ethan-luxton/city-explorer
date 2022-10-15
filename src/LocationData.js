@@ -9,7 +9,7 @@ class LocationData extends React.Component {
        
         
         
-        {this.props.locationData && <Card style={{ width: '18rem' }}>
+        {this.props.locationData && <Card className='locationCard'style={{ width: '18rem' }}>
           
           <Card.Body>
             <Card.Title>{this.props.locationData.display_name}</Card.Title>
