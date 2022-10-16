@@ -1,34 +1,35 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Card';
 
 
-
 class Movies extends React.Component {
-    render() {
-        return (
-          <>
-            {this.props.displayMovies &&
-            <Container>
-           <h4>Movies for {this.props.locationData.display_name}</h4>
-              <div>
-                {this.props.movieData.map((e, i) => {
-                  return (
-                    <>
-                        <div className={'container'}>
-                            <img className={'movie'} src={e.poster} alt={e.title}/>
-                            <div className={'movie'}><h5 key={i}>Movie: {e.title}</h5></div>
-                            <div className={'movie'}><h6>Description: {e.overview}</h6></div>
-                        </div>
-                    </>
-                  )
-                })}
-              </div>
-             
-            </Container>
-            }
-          </>
-        )
-      }
-    }
+  render() {
+    return (
+      <>
+        <h4>Movies for {this.props.locationData.display_name}</h4>
+          {this.props.displayMovies &&  
+          <Container>
+            <Row xs={2} md={4} lg={6}>
+            {this.props.movieData.map((e, i) => {
+            return (
+            <Card style={{ width: '16rem' }}>
+              <Card.Body>
+                <Card.Img src={e.poster} alt={e.title} />
+                <Card.Title>Movie: {e.title}</Card.Title>
+                <Card.Text>Description: {e.overview}</Card.Text>
+  
+              </Card.Body>
+            </Card>
+            )
+          })}
+          </Row>
+        </Container>
+        }
+      </>
+    )
+  }
+}
 export default Movies;
 

@@ -28,9 +28,11 @@ class App extends React.Component {
     console.log('URL: ', url)
     const response = await axios.get(url).catch(err => alert(`Can't display a location that doesn't exist: ${err}`));
     console.log(response)
-    this.setState({location: response.data[0]})
-    this.handleWeather();
-    this.handleMovies();
+    this.setState({location: response.data[0]},() => {
+      this.handleWeather();
+      this.handleMovies();
+    })
+    
   }
   handleWeather = async () => {
     try {
@@ -62,9 +64,10 @@ class App extends React.Component {
     return (
       <>
           <Header handleChange={this.handleChange} getLocation={this.getLocation}/>
-          <LocationData locationData={this.state.location}/>
-          <Movie locationData={this.state.location} movieData={this.state.movieData} displayMovies={this.state.displayMovies}/>
+          <LocationData className='test'locationData={this.state.location}/>
           <Weather locationData={this.state.location} weatherData={this.state.weatherData} displayWeather={this.state.displayWeather}/>
+          <Movie locationData={this.state.location} movieData={this.state.movieData} displayMovies={this.state.displayMovies}/>
+          
 
       </>
     
